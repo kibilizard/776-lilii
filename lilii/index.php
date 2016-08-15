@@ -39,7 +39,7 @@ if (isset($_GET['act']))
 	if ($_GET['act'] == 'atb')
 	{
 		$usr->add_to_basket($_GET['prodid'],$_GET['c'],$_GET['s'],$_GET['catpath'],1);
-		header('location: http://127.0.0.1/edsa-lilii/index.php?type=product&catpath='.$_GET['catpath'].'&prodid='.$_GET['prodid']);
+		header('location: index.php?type=product&catpath='.$_GET['catpath'].'&prodid='.$_GET['prodid']);
 		exit();
 	}
 }
@@ -184,7 +184,7 @@ function printlib($lib,$i,$path)
 					echo '<table cellpadding="10">';
 					foreach ($usr->basket->positions as $p)
 					{
-						$h ='http://127.0.0.1/edsa-lilii/index.php?type=product&catpath='.$p->position['cpath'].'&prodid='.$p->position['pid'].'&color='.$p->position['colid'];
+						$h ='index.php?type=product&catpath='.$p->position['cpath'].'&prodid='.$p->position['pid'].'&color='.$p->position['colid'];
 						echo '<tr><td style="background: url(\'images/dotted_line.png\') repeat-x bottom left;"><a href='.$h.'><img src="'.$p->position['foto'].'" style="width:45px;"></a></td>';
 						echo '<td style="background: url(\'images/dotted_line.png\') repeat-x bottom left;"><a href='.$h.'><p style="text-transform:uppercase;">'.$p->position['desc'].'</p>';
 						$c1 = (int)($p->position['cost']/1000);
@@ -471,7 +471,7 @@ function printlib($lib,$i,$path)
 							$tmppos = 100;
 							foreach($usr->basket->positions as $p)
 							{
-								$h ='http://127.0.0.1/edsa-lilii/index.php?type=product&catpath='.$p->position['cpath'].'&prodid='.$p->position['pid'].'&color='.$p->position['colid'];
+								$h ='index.php?type=product&catpath='.$p->position['cpath'].'&prodid='.$p->position['pid'].'&color='.$p->position['colid'];
 								echo '<tr>
 								<td id="foto'.$p->position['id'].'" style="padding-top:15px; padding-bottom:15px;background: url(\'images/dotted_line.png\') repeat-x bottom left;">';
 								echo '<a href="'.$h.'"><img src="'.$p->position['foto'].'" style="width:65px;"></a>';
@@ -925,7 +925,7 @@ function undopos(id,obj)
 				alert('ОШИБКИ AJAX запроса: ' + textStatus +' '+errorThrown );
 			}
 	  });
-	if (empty) location.href = 'http://127.0.0.1/edsa-lilii/index.php?type=category&catpath=a:1:{i:0;i:2;}&count=2';
+	if (empty) location.href = 'index.php?type=category&catpath=a:1:{i:0;i:2;}&count=2';
 }
 function chpos(id,obj)
 {
