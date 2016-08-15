@@ -1,0 +1,69 @@
+
+@import "http://webfonts.ru/import/poiret.css";
+
+@font-face {   
+	font-family: 'Poiret One';
+    src: url("PoiretOne-Regular.eot");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+	background: #ffffff;
+	color: #000000;
+    font-family: 'Poiret One';
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+}
+
+h1,h2 {
+  	color: white;
+  	font-size:35px;
+  }
+
+#shadow{
+	display: block;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	Z-index: 85;
+	opacity: 0.5;
+  	filter: alpha(opacity=50);
+}
+
+#shadowblack{
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	Z-index: 105;
+	opacity: 0.6;
+  	filter: alpha(opacity=60);
+}
+
+.selfot{
+	border: 2px solid green;
+}
+.unselfot{
+	border: 2px solid white;
+}
+
+.opened{
+	display:block;
+	Z-index:104;
+}
+.closed{
+	display:none;
+	Z-index:90;
+}
