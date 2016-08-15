@@ -8,13 +8,13 @@
     	exit();
     }
 	$db_hostname = 'localhost';
-	$db_database = 'ck74682_776';
+	$db_database = '***';
 	$dsn = "mysql:host=$db_hostname;dbname=$db_database;charset=utf8";
 	$opt = array(
 		PDO::ATTR_ERRMODE 			 => PDO::ERRMODE_EXCEPTION,
 		PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
 		);
-    $pdo = new PDO($dsn, 'ck74682_776', 'fynjy776', $opt);
+    $pdo = new PDO($dsn, '****', '*****', $opt);
 	$stmt = $pdo->query('SELECT id, foto, style, cost, crdate, colors FROM positions');
 	$lib = array();
 	while ($row = $stmt->fetch())
